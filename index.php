@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/classes/products.php';
+require_once __DIR__ . '/classes/customer.php';
 ?>
 
 <!DOCTYPE html>
@@ -71,6 +72,19 @@ require_once __DIR__ . '/classes/products.php';
                 <?php echo $product2->getSize(); ?> 
             </div>
         </div>  
+        <div class="customer">
+            <?php
+            $customer1 = new Customer(1,5);
+            var_dump($customer1);
+            ?>
+        </div>
+        <div class="discount">
+            Sconto: 
+            <?php
+                echo $customer1->getDiscount();
+            ?>
+            %
+        </div>
         </section>
     </main>
 
