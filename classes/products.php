@@ -17,4 +17,7 @@ public function __construct($name, $category, $quantity, $price) {
     $this -> price = $price;
 }
 
+public function getName() {
+    return $this->name;
+}
 }
