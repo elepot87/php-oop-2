@@ -33,3 +33,21 @@ public function getPrice() {
     return $this->price;
 }
 }
+
+
+class Clothes extends Product {
+// proprità taglia
+public $size;
+
+// metodi
+
+public function __construct($name, $category, $quantity, $price, $size) {
+    parent::__construct($name, $category, $quantity, $price);
+    $this->size = $size;
+}
+
+public function getSize() {
+    return $this->size;
+}
+
+}
