@@ -19,7 +19,7 @@ require_once __DIR__ . '/classes/products.php';
         <section>
             <!-- Instanza Product -->
             <?php 
-            $product1 = new Product('Crema all\'aloe', 'Corpo', 35, 27.99 );
+            $product1 = new Product('Crema all\'aloe', 'Corpo', 35, 27,99 );
             var_dump($product1);
             ?>
             <h3>
@@ -28,6 +28,18 @@ require_once __DIR__ . '/classes/products.php';
                 echo $product1->getName();
                 ?>
             </h3>
+            <div class="category">
+                Categoria:
+                <?php echo $product1->getCategory(); ?>
+            </div>
+            <div class="magazzino">
+                Magazzino:
+                <?php echo $product1->getQuantity(); ?>
+            </div>
+            <div class="price">
+                Prezzo: 
+                <?php echo $product1->getPrice(); ?> €
+            </div>
         </section>
     </main>
 
