@@ -74,12 +74,14 @@ require_once __DIR__ . '/classes/customer.php';
         </div>  
         <div class="customer">
             <?php
-            $customer1 = new Customer(1,5);
+            $customer1 = new Customer(1,2);
             var_dump($customer1);
             ?>
         </div>
         <div class="discount">
-            Sconto: 
+            Per te che sei socio da 
+            <?php echo $customer1 -> getFidelity(); ?> anni, lo 
+            sconto è del 
             <?php
                 echo $customer1->getDiscount();
             ?>

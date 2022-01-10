@@ -16,6 +16,10 @@ public function __construct($fidelity, $numbPurchase) {
     $this -> numbPurchase = $numbPurchase;
 }
 
+public function getFidelity() {
+    return $this -> fidelity;
+}
+
 protected function setDiscount() {
     $this -> discount = $this-> numbPurchase >= 5 ? 30 : 10;
 }
